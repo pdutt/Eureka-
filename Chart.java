@@ -48,10 +48,13 @@ public class Chart {
 	    	variances[j]=CalculateVariance.listOfVariances.get(j).getVariance();
 	    }
 	    
-	    chart.addSeries("a", returns, variances);
+	    chart.addSeries("a", variances, returns);
+	    //chart.addSeries("b", returns, variances);
 	    //chart.addSeries("b", new double[] { 0, 2, 4, 6, 9 }, new double[] { -1, 6, 4, 0, 4 });
 	    //chart.addSeries("c", new double[] { 0, 1, 3, 8, 9 }, new double[] { -2, -1, 1, 0, 1 });
 	 
 	    return chart;
 	  }
+	
+	
 }

@@ -36,7 +36,7 @@ public class Tester {
 		Chart exampleChart = new Chart();
 	    XYChart chart1 = exampleChart.getChart();
 	    new SwingWrapper<XYChart>(chart1).displayChart();
-	 
+	
 	}
 	/*
 	 * Tests execution of entire calculatian of variance (displays different variances)
@@ -57,7 +57,8 @@ public class Tester {
 			ArrayList<Double> dataPoints = new ArrayList<Double>();
 			for(int j=0; j<20; j++){
 				//generates random numbers between 0-15
-				dataPoints.add(Math.floor((Math.random() * 18)-9));
+				dataPoints.add((Math.random() * 12)-6);
+				
 			}
 			Fund fund = new Fund(String.valueOf(i), dataPoints);
 			funds.add(fund);
