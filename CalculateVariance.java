@@ -60,10 +60,10 @@ public class CalculateVariance {
 			
 			//finds variance
 			double variance = findVariance(listOfFunds, listOfListOfWeights.get(i));
-			
+			//System.out.println(variance);
 			//finds returns
 			double returns = findReturn(listOfFunds, listOfListOfWeights.get(i));
-			
+			//System.out.println(returns);
 			//creates Variance Info object
 			VarianceInfo vInfo = new VarianceInfo(variance, returns, listOfListOfWeights.get(i));
 			
@@ -75,6 +75,8 @@ public class CalculateVariance {
 		}
 		//sorts list by returns in ascending order
 		sortReturnsAscending();
+		//sorts list by variances in ascending order
+		sortVariancesAscending();
 		//returns list
 		return listOfVariances;
 	}
@@ -353,7 +355,7 @@ public class CalculateVariance {
 	 * checks returns to be above a certain percentage
 	 */
 	public static boolean checkReturns(VarianceInfo vInfo){
-		if (vInfo.getReturn()>=7){
+		if (vInfo.getReturn()>=0.04){
 			return true;
 		}
 		return false;
@@ -390,5 +392,35 @@ public class CalculateVariance {
 	   return arr;
  }
 
+	/*
+	 * sort variance list
+	 */
+	public static VarianceInfo[] sortVariancesAscending()
+	{
+		
+	VarianceInfo[] arr = new VarianceInfo[listOfVariances.size()];
+	//populate array w values from list of variances
+	for(int i=0; i<arr.length; i++){
+		arr[i] = listOfVariances.get(i);
+	}
+	//sort array
+	   for (int i = arr.length - 1; i >= 0; i--)
+	   {
+	      for (int j = 1; j <= i; j++)
+	      {
+	         if (arr[j-1].getVariance()> arr[j].getVariance())
+	         {
+	              VarianceInfo temp = arr[j-1];
+	              arr[j-1]=arr[j];
+	              arr[j]=temp;
+	   } 
+	         } 
+	      }
+	   //re-populate list with values in order
+	   for(int i=0; i<arr.length; i++){
+		   listOfVariances.set(i,arr[i]);
+	   }
+	   return arr;
+ }
 
 }

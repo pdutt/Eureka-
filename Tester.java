@@ -50,20 +50,81 @@ public class Tester {
 		ArrayList<Double> dataPoints1 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints2 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints3 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints4 = new ArrayList<Double>();
 		ArrayList<Fund> funds = new ArrayList<Fund>();
 		
+		dataPoints1.add(0.1);
+		dataPoints1.add(0.12);
+		dataPoints1.add(0.04);
+		dataPoints1.add(-0.12);
+		dataPoints1.add(0.08);
+		dataPoints1.add(0.09);
+		dataPoints1.add(0.25);
+		dataPoints1.add(0.10);
+		dataPoints1.add(-0.04);
+		dataPoints1.add(0.10);
+		
+		Fund fund1 = new Fund("Fund A", dataPoints1);
+		funds.add(fund1);
+		
+		dataPoints2.add(0.20);
+		dataPoints2.add(0.22);
+		dataPoints2.add(0.065);
+		dataPoints2.add(-0.30);
+		dataPoints2.add(.25);
+		dataPoints2.add(-.10);
+		dataPoints2.add(.07);
+		dataPoints2.add(.15);
+		dataPoints2.add(-.05);
+		dataPoints2.add(0.27);
+		
+		Fund fund2 = new Fund("Fund B", dataPoints2);
+		funds.add(fund2);
+		
+		dataPoints3.add(0.14);
+		dataPoints3.add(0.10);
+		dataPoints3.add(0.25);
+		dataPoints3.add(-.10);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.06);
+		dataPoints3.add(0.40);
+		dataPoints3.add(-.35);
+		dataPoints3.add(0.13);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.35);
+		dataPoints3.add(-0.12);
+		
+		Fund fund3 = new Fund("Fund C", dataPoints3);
+		funds.add(fund3);
+		
+		dataPoints4.add(0.06);
+		dataPoints4.add(0.10);
+		dataPoints4.add(0.25);
+		dataPoints4.add(-.10);
+		dataPoints4.add(0.05);
+		dataPoints4.add(0.06);
+		dataPoints4.add(0.40);
+		dataPoints4.add(-.35);
+		dataPoints4.add(0.13);
+		dataPoints4.add(0.05);
+		dataPoints4.add(0.35);
+		dataPoints4.add(-0.12);
+		
+		Fund fund4 = new Fund("Fund D", dataPoints4);
+		funds.add(fund4);
+		
 		//populates list of funds with dummy data
-		for(int i=0; i<3; i++){
+		/*for(int i=0; i<3; i++){
 			ArrayList<Double> dataPoints = new ArrayList<Double>();
 			for(int j=0; j<20; j++){
 				//generates random numbers between 0-15
-				dataPoints.add((Math.random() * 12)-6);
+				dataPoints.add(Math.floor((Math.random() * 12)));
 				
 			}
 			Fund fund = new Fund(String.valueOf(i), dataPoints);
 			funds.add(fund);
 		}
-		
+		*/
 		//test execution
 		CalculateVariance.Execute(funds);
 		//System.out.println(CalculateVariance.listOfVariances.size());
@@ -241,45 +302,42 @@ public class Tester {
 			
 		}*/
 		
-		dataPoints1.add(2.3);
-		dataPoints1.add(1.3);
-		dataPoints1.add(1.5);
-		dataPoints1.add(1.8);
-		dataPoints1.add(2.0);
-		dataPoints1.add(4.9);
-		dataPoints1.add(0.9);
-		dataPoints1.add(2.4);
-		dataPoints1.add(4.8);
-		dataPoints1.add(5.6);
-		dataPoints1.add(9.0);
-		dataPoints1.add(1.3);
+		dataPoints1.add(0.1);
+		dataPoints1.add(0.12);
+		dataPoints1.add(0.04);
+		dataPoints1.add(-0.22);
+		dataPoints1.add(0.16);
+		dataPoints1.add(0.03);
+		dataPoints1.add(0.04);
+		dataPoints1.add(0.10);
+		dataPoints1.add(-0.04);
+		dataPoints1.add(0.10);
 		
-		dataPoints2.add(1.2);
-		dataPoints2.add(1.3);
-		dataPoints2.add(5.9);
-		dataPoints2.add(6.9);
-		dataPoints2.add(7.2);
-		dataPoints2.add(4.8);
-		dataPoints2.add(2.1);
-		dataPoints2.add(9.0);
-		dataPoints2.add(3.2);
+		dataPoints2.add(0.02);
+		dataPoints2.add(0.22);
+		dataPoints2.add(0.065);
+		dataPoints2.add(-0.30);
+		dataPoints2.add(.25);
+		dataPoints2.add(-.10);
+		dataPoints2.add(.07);
+		dataPoints2.add(.1);
+		dataPoints2.add(-.05);
+		dataPoints2.add(0.2);
 		
-		dataPoints3.add(2.4);
-		dataPoints3.add(2.5);
-		dataPoints3.add(2.8);
-		dataPoints3.add(2.9);
-		dataPoints3.add(3.0);
-		dataPoints3.add(1.4);
-		dataPoints3.add(1.2);
-		dataPoints3.add(0.9);
-		dataPoints3.add(4.8);
-		dataPoints3.add(4.0);
-		dataPoints3.add(3.9);
-		dataPoints3.add(1.2);
-		dataPoints3.add(3.9);
-		dataPoints3.add(5.0);
-		dataPoints3.add(4.7);
-		dataPoints3.add(3.9);
+		
+		dataPoints3.add(0.06);
+		dataPoints3.add(0.10);
+		dataPoints3.add(0.25);
+		dataPoints3.add(-.10);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.06);
+		dataPoints3.add(0.40);
+		dataPoints3.add(-.35);
+		dataPoints3.add(0.13);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.35);
+		dataPoints3.add(-0.12);
+		
 		
 		Fund fund1 = new Fund("Fund A", dataPoints1);
 		Fund fund2 = new Fund("Fund B", dataPoints2);
