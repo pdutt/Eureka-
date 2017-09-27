@@ -51,6 +51,7 @@ public class Tester {
 		ArrayList<Double> dataPoints2 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints3 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints4 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints5 = new ArrayList<Double>();
 		ArrayList<Fund> funds = new ArrayList<Fund>();
 		
 		dataPoints1.add(0.1);
@@ -112,6 +113,23 @@ public class Tester {
 		
 		Fund fund4 = new Fund("Fund D", dataPoints4);
 		funds.add(fund4);
+		
+		dataPoints5.add(0.10);
+		dataPoints5.add(0.10);
+		dataPoints5.add(0.25);
+		dataPoints5.add(-.16);
+		dataPoints5.add(0.05);
+		dataPoints5.add(0.06);
+		dataPoints5.add(0.40);
+		dataPoints5.add(-.35);
+		dataPoints5.add(0.06);
+		dataPoints5.add(0.12);
+		dataPoints5.add(0.34);
+		dataPoints5.add(-0.04);
+		
+		Fund fund5 = new Fund("Fund E", dataPoints5);
+		funds.add(fund5);
+		
 		
 		//populates list of funds with dummy data
 		/*for(int i=0; i<3; i++){
