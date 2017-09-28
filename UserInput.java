@@ -73,10 +73,10 @@ public class UserInput {
 	/*
 	 * populates fund objects based on excel data
 	 */
-	public void executeExcelData(String fileName) throws FileNotFoundException{
+	public void executeExcelData(String fileName) throws IOException{
 		File file = new File(fileName);
 		FileInputStream fs = new FileInputStream(file);
-		
+		fs.close();
 		//finds workbook instance of excel file
 		//XSSFWorkbook workbook = new XSSFWorkbook (fs);
 	}

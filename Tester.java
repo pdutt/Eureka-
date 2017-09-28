@@ -36,6 +36,10 @@ public class Tester {
 		Chart exampleChart = new Chart();
 	    XYChart chart1 = exampleChart.getChart1();
 	    new SwingWrapper<XYChart>(chart1).displayChart();
+	    
+	    Chart exampleChart2 = new Chart();
+	    XYChart chart2 = exampleChart2.getChart2();
+	    new SwingWrapper<XYChart>(chart2).displayChart();
 	
 	}
 	/*
@@ -229,7 +233,7 @@ public class Tester {
 		}
 		*/
 		//test execution
-		CalculateVariance.Execute(funds, 10000);
+		CalculateVariance.Execute(funds, 5000);
 		//System.out.println(CalculateVariance.listOfVariances.size());
 		System.out.println("___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 		System.out.println();
