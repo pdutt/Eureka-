@@ -22,7 +22,7 @@ import org.knowm.xchart.style.Styler.LegendPosition;
 
 public class Chart {
 	
-	public XYChart getChart() {
+	public XYChart getChart1() {
 		 
 	    // Create Chart
 	    XYChart chart = new XYChartBuilder().width(800).height(600).title(getClass().getSimpleName()).xAxisTitle("Returns").yAxisTitle("Variance").build();

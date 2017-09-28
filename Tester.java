@@ -34,7 +34,7 @@ public class Tester {
 	 */
 	public static void testChart(){
 		Chart exampleChart = new Chart();
-	    XYChart chart1 = exampleChart.getChart();
+	    XYChart chart1 = exampleChart.getChart1();
 	    new SwingWrapper<XYChart>(chart1).displayChart();
 	
 	}
@@ -172,11 +172,11 @@ public class Tester {
 		dataPoints8.add(-0.09);
 		dataPoints8.add(-.16);
 		dataPoints8.add(-0.05);
-		dataPoints8.add(0.20);
+		dataPoints8.add(-0.20);
 		dataPoints8.add(0.34);
 		dataPoints8.add(-.35);
 		dataPoints8.add(0.12);
-		dataPoints8.add(0.12);
+		dataPoints8.add(-0.12);
 		dataPoints8.add(0.34);
 		dataPoints8.add(-0.04);
 		
@@ -186,13 +186,13 @@ public class Tester {
 		dataPoints9.add(0.10);
 		dataPoints9.add(0.10);
 		dataPoints9.add(0.25);
-		dataPoints9.add(0.07);
+		dataPoints9.add(0.17);
 		dataPoints9.add(0.05);
-		dataPoints9.add(0.06);
+		dataPoints9.add(0.16);
 		dataPoints9.add(0.09);
-		dataPoints9.add(-.35);
+		dataPoints9.add(-.15);
 		dataPoints9.add(0.06);
-		dataPoints9.add(0.12);
+		dataPoints9.add(0.22);
 		dataPoints9.add(0.34);
 		dataPoints9.add(-0.04);
 		
@@ -202,13 +202,13 @@ public class Tester {
 		dataPoints10.add(-0.09);
 		dataPoints10.add(-.08);
 		dataPoints10.add(0.25);
-		dataPoints10.add(-.16);
-		dataPoints10.add(0.10);
+		dataPoints10.add(-.10);
+		dataPoints10.add(0.29);
 		dataPoints10.add(0.29);
 		dataPoints10.add(-0.40);
 		dataPoints10.add(0.35);
 		dataPoints10.add(0.36);
-		dataPoints10.add(0.12);
+		dataPoints10.add(0.29);
 		dataPoints10.add(0.34);
 		dataPoints10.add(-0.04);
 		
@@ -229,7 +229,7 @@ public class Tester {
 		}
 		*/
 		//test execution
-		CalculateVariance.Execute(funds);
+		CalculateVariance.Execute(funds, 10000);
 		//System.out.println(CalculateVariance.listOfVariances.size());
 		System.out.println("___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 		System.out.println();
@@ -258,7 +258,7 @@ public class Tester {
 		double numberOfFunds = 3;
 		
 		System.out.println("TEST CASE-->[Generates random weight options]: ");
-		CalculateVariance.generateRandomWeights(numberOfFunds);
+		CalculateVariance.generateRandomWeights(numberOfFunds,100000);
 	}
 	
 	/*

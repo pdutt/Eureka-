@@ -50,10 +50,10 @@ public class CalculateVariance {
 	 * testing general execution. 
 	 * 
 	 */
-	public static ArrayList<VarianceInfo> Execute(ArrayList<Fund> listOfFunds){
+	public static ArrayList<VarianceInfo> Execute(ArrayList<Fund> listOfFunds, int numberOfWeightCombos){
 		
 		//populates listOfListOfWeights
-		generateRandomWeights(listOfFunds.size());
+		generateRandomWeights(listOfFunds.size(), numberOfWeightCombos);
 		
 		//ArrayList<ArrayList<Double>> listOfWeights = new ArrayList<ArrayList<Double>>();
 		for(int i=0; i<listOfListOfWeights.size();i++){
@@ -110,13 +110,13 @@ public class CalculateVariance {
 	 * The list of 1000 is stored in an array list, and then used to compare
 	 * each possibility of weights for the variance formula and the return formula. 
 	 */
-	public static void generateRandomWeights(double numberOfFunds){
+	public static void generateRandomWeights(double numberOfFunds, int numberOfWeightCombos){
 		
 		
 		double value = 0;
 		
 		//populates list with random numbers
-		for(int i=0; i<1000; i++){
+		for(int i=0; i<numberOfWeightCombos; i++){
 			double sum =0;
 			ArrayList<Double> weights = new ArrayList<Double>();
  			for(int j=0; j<numberOfFunds; j++){
