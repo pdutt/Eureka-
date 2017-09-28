@@ -52,6 +52,11 @@ public class Tester {
 		ArrayList<Double> dataPoints3 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints4 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints5 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints6 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints7 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints8 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints9 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints10 = new ArrayList<Double>();
 		ArrayList<Fund> funds = new ArrayList<Fund>();
 		
 		dataPoints1.add(0.1);
@@ -130,6 +135,86 @@ public class Tester {
 		Fund fund5 = new Fund("Fund E", dataPoints5);
 		funds.add(fund5);
 		
+		dataPoints6.add(0.12);
+		dataPoints6.add(-0.10);
+		dataPoints6.add(0.25);
+		dataPoints6.add(0.32);
+		dataPoints6.add(-0.05);
+		dataPoints6.add(-0.06);
+		dataPoints6.add(0.40);
+		dataPoints6.add(-.35);
+		dataPoints6.add(0.13);
+		dataPoints6.add(0.09);
+		dataPoints6.add(0.34);
+		dataPoints6.add(-0.10);
+		
+		Fund fund6 = new Fund("Fund F", dataPoints6);
+		funds.add(fund6);
+		
+		dataPoints7.add(0.18);
+		dataPoints7.add(0.08);
+		dataPoints7.add(0.09);
+		dataPoints7.add(-.10);
+		dataPoints7.add(0.30);
+		dataPoints7.add(-.20);
+		dataPoints7.add(0.51);
+		dataPoints7.add(-.35);
+		dataPoints7.add(0.06);
+		dataPoints7.add(0.09);
+		dataPoints7.add(0.08);
+		dataPoints7.add(-0.04);
+		
+		Fund fund7 = new Fund("Fund G", dataPoints7);
+		funds.add(fund7);
+		
+		dataPoints8.add(0.20);
+		dataPoints8.add(0.10);
+		dataPoints8.add(-0.09);
+		dataPoints8.add(-.16);
+		dataPoints8.add(-0.05);
+		dataPoints8.add(0.20);
+		dataPoints8.add(0.34);
+		dataPoints8.add(-.35);
+		dataPoints8.add(0.12);
+		dataPoints8.add(0.12);
+		dataPoints8.add(0.34);
+		dataPoints8.add(-0.04);
+		
+		Fund fund8 = new Fund("Fund H", dataPoints8);
+		funds.add(fund8);
+		
+		dataPoints9.add(0.10);
+		dataPoints9.add(0.10);
+		dataPoints9.add(0.25);
+		dataPoints9.add(0.07);
+		dataPoints9.add(0.05);
+		dataPoints9.add(0.06);
+		dataPoints9.add(0.09);
+		dataPoints9.add(-.35);
+		dataPoints9.add(0.06);
+		dataPoints9.add(0.12);
+		dataPoints9.add(0.34);
+		dataPoints9.add(-0.04);
+		
+		Fund fund9 = new Fund("Fund I", dataPoints9);
+		funds.add(fund9);
+		
+		dataPoints10.add(-0.09);
+		dataPoints10.add(-.08);
+		dataPoints10.add(0.25);
+		dataPoints10.add(-.16);
+		dataPoints10.add(0.10);
+		dataPoints10.add(0.29);
+		dataPoints10.add(-0.40);
+		dataPoints10.add(0.35);
+		dataPoints10.add(0.36);
+		dataPoints10.add(0.12);
+		dataPoints10.add(0.34);
+		dataPoints10.add(-0.04);
+		
+		Fund fund10 = new Fund("Fund J", dataPoints10);
+		funds.add(fund10);
+		
 		
 		//populates list of funds with dummy data
 		/*for(int i=0; i<3; i++){
@@ -146,12 +231,12 @@ public class Tester {
 		//test execution
 		CalculateVariance.Execute(funds);
 		//System.out.println(CalculateVariance.listOfVariances.size());
-		System.out.println("_____________________________________________________________________________________________________________________________________________________");
+		System.out.println("___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 		System.out.println();
-		System.out.println("     VARIANCE               RETURNS                              FUND A                      FUND B                     FUND C");
+		System.out.println("     VARIANCE               RETURNS                              FUND A                      FUND B                     FUND C                          FUND D                      FUND E                         FUND F                         FUND G                    FUND H                      FUND I                      FUND J" );
 		for(int i=0; i<CalculateVariance.listOfVariances.size(); i++){
 			double roundedVariance = CalculateVariance.listOfVariances.get(i).getVariance();
-			System.out.println("__________________________________________________________________________________________________________________________________________________");
+			System.out.println("________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 			System.out.print(roundedVariance+"        ");
 			System.out.print(CalculateVariance.listOfVariances.get(i).getReturn()+"%                ");
 			for(int j=0; j<CalculateVariance.listOfVariances.get(i).getWeights().size(); j++){
