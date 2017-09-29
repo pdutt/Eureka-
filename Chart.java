@@ -70,9 +70,8 @@ public class Chart {
 	    	variances[j]=CalculateVariance.listOfVariances.get(j).getVariance();
 	    }
 
-	    
 	    chart.addSeries("a", variances, returns);
-	    chart.addSeries("b", bestVariances, bestReturns);
+	    chart.addSeries("b", sortVariances(bestVariances), bestReturns);
 	    
 	    //chart.addSeries("b", returns, variances);
 	    //chart.addSeries("b", new double[] { 0, 2, 4, 6, 9 }, new double[] { -1, 6, 4, 0, 4 });
@@ -111,7 +110,19 @@ public class Chart {
 	    	}
 	    }
 	   
-		//sort x axis for best returns/variances
+		
+	    chart.addSeries("a", sortVariances(bestVariances), bestReturns);
+	    //chart.addSeries("b", returns, variances);
+	    //chart.addSeries("b", new double[] { 0, 2, 4, 6, 9 }, new double[] { -1, 6, 4, 0, 4 });
+	    //chart.addSeries("c", new double[] { 0, 1, 3, 8, 9 }, new double[] { -2, -1, 1, 0, 1 });
+	 
+	    return chart;
+	  }
+	
+	/*
+	 * sorts bestVariances list in ascending order
+	 */
+	public double[] sortVariances(double[] bestVariances){
 		double[] arr = new double[bestVariances.length];
 		//populate array w values from list of variances
 		for(int i=0; i<arr.length; i++){
@@ -130,14 +141,8 @@ public class Chart {
 		   } 
 		         } 
 		   }
-		      
-	    chart.addSeries("a", arr, bestReturns);
-	    //chart.addSeries("b", returns, variances);
-	    //chart.addSeries("b", new double[] { 0, 2, 4, 6, 9 }, new double[] { -1, 6, 4, 0, 4 });
-	    //chart.addSeries("c", new double[] { 0, 1, 3, 8, 9 }, new double[] { -2, -1, 1, 0, 1 });
-	 
-	    return chart;
-	  }
+		   return arr;
+	}
 	
 	
 	

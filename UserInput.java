@@ -75,12 +75,12 @@ public class UserInput {
 	 */
 	
 		public void read() throws IOException{
-			File file = new File("dummydata.txt");
+			File file = new File("/Users/pdutt/Documents/workspace/Eureka!/src/dummydata.txt");
 		    Scanner scanner = new Scanner(file);
 		    
-		    while(scanner.hasNextLine()){
+		    while(scanner.hasNextDouble()){
 		    	
-		        System.out.println(scanner.next());
+		        System.out.println(scanner.nextDouble());
 		    }
 		}
 		//finds workbook instance of excel file
