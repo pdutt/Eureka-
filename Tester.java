@@ -45,7 +45,7 @@ public class Tester {
 	/*
 	 * Tests execution of entire calculatian of variance (displays different variances)
 	 */
-	public static void testExecution(){
+	public static void testExecution(int numberOfDataPoints){
 		
 		//dummy list
 		
@@ -233,7 +233,7 @@ public class Tester {
 		}
 		*/
 		//test execution
-		CalculateVariance.Execute(funds, 5000);
+		CalculateVariance.Execute(funds, numberOfDataPoints);
 		//System.out.println(CalculateVariance.listOfVariances.size());
 		System.out.println("___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 		System.out.println();

@@ -22,6 +22,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import org.knowm.xchart.QuickChart;
@@ -30,7 +31,7 @@ import org.knowm.xchart.XYChart;
 
 public class Main {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		
 	    
 		//creates new instance of User Input 
@@ -44,8 +45,10 @@ public class Main {
 		///Tester.testGetCovariance();
 		//Tester.testVariance();
 		//Tester.testGenerateRandomWeights();
-		Tester.testExecution();
+		input.read();
+		Tester.testExecution(1000);//number used is number of data points needed to test graph
 		Tester.testChart();
+		
 		//Tester.testStorageOfWeights();
 			
 		//executes user input
