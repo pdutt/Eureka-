@@ -34,8 +34,7 @@ import java.util.ArrayList;
  * ALSO-- I have NOT filtered by year. So if Fund A starts in 2010 , and Fund B
  * starts in 2003... the calculations will start at the start date of each fund. Can 
  * modify based on date later. 
- */
-public class CalculateVariance {
+ */public class CalculateVariance {
 	
 	public static ArrayList<ArrayList<Double>> listOfListOfWeights = new ArrayList<ArrayList<Double>>();
 	public static ArrayList<VarianceInfo> listOfVariances = new ArrayList<VarianceInfo>();

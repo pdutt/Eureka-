@@ -74,20 +74,19 @@ public class UserInput {
 	 * populates fund objects based on excel data
 	 */
 	
-		public void read() throws IOException{
+		/*public void read() throws IOException{
 			File file = new File("/Users/pdutt/Documents/workspace/Eureka!/src/dummydata.txt");
 		    Scanner scanner = new Scanner(file);
-		    
 		    while(scanner.hasNextLine()){
-		    	
-		    	while(scanner.hasNextDouble()){
+		    
+		    	String fund = scanner.next();
+		    	while(scanner.hasNext()){
 			    	
-			        System.out.print(scanner.nextDouble());
+			        System.out.print(fund);
 			    }
 		    	System.out.println();
 		    }
-		    System.out.println();
-		}
+		}*/
 		//finds workbook instance of excel file
 		//XSSFWorkbook workbook = new XSSFWorkbook (fs);
 	
