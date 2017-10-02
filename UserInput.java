@@ -78,10 +78,15 @@ public class UserInput {
 			File file = new File("/Users/pdutt/Documents/workspace/Eureka!/src/dummydata.txt");
 		    Scanner scanner = new Scanner(file);
 		    
-		    while(scanner.hasNextDouble()){
+		    while(scanner.hasNextLine()){
 		    	
-		        System.out.println(scanner.nextDouble());
+		    	while(scanner.hasNextDouble()){
+			    	
+			        System.out.print(scanner.nextDouble());
+			    }
+		    	System.out.println();
 		    }
+		    System.out.println();
 		}
 		//finds workbook instance of excel file
 		//XSSFWorkbook workbook = new XSSFWorkbook (fs);

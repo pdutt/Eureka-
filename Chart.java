@@ -27,7 +27,7 @@ public class Chart {
 	public XYChart getChart1() {
 		 
 	    // Create Chart
-	    XYChart chart = new XYChartBuilder().width(800).height(600).title(getClass().getSimpleName()).xAxisTitle("Returns").yAxisTitle("Variance").build();
+	    XYChart chart = new XYChartBuilder().width(800).height(600).title(getClass().getSimpleName()).xAxisTitle("Variance").yAxisTitle("Returns").build();
 	 
 	    // Customize Chart
 	    chart.getStyler().setLegendPosition(LegendPosition.InsideNE);

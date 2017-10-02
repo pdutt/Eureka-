@@ -41,7 +41,7 @@ public class Main {
 		//Tester.testVariance();
 		//Tester.testGenerateRandomWeights();
 		input.read();
-		Tester.testExecution(100);//number used is number of data points needed to test graph
+		Tester.testExecution(1000);//number used is number of data points needed to test graph
 		Tester.testChart();
 		
 		//Tester.testStorageOfWeights();
