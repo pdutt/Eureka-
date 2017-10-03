@@ -74,34 +74,37 @@ public class UserInput {
 	 * populates fund objects based on excel data
 	 */
 	
-		/*public void read() throws IOException{
+		public void read(int numberOfDataPoints) throws IOException{
 			File file = new File("/Users/pdutt/Documents/workspace/Eureka!/dummydata.txt");
 		    Scanner scanner = new Scanner(file);
+		    String temp = null;
 		    String fund = null;
 		    double valueOfFund = 0.0;
 		    ArrayList<Double> listOfData = new ArrayList<Double>();
 		    ArrayList<Fund> listOfFunds = new ArrayList<Fund>();
+		    Fund newFund = null;
 		    
-		    String name =null;
-		    	while(scanner.hasNext()){
-		    		name = fund;
-		    		fund = scanner.next();
-		    		System.out.print(fund);
-		    		while(fund.length()!=5){
-		    			fund=scanner.next();
-		    			System.out.print(fund);
-		    			valueOfFund = Double.parseDouble(fund);
-		    			listOfData.add(valueOfFund);
-		    		}
-		    		Fund fundObject = new Fund(name, listOfData);
-		    		listOfFunds.add(fundObject);
-		    		listOfData = new ArrayList<Double>();
-			        System.out.print(fund);
-			        
-			    }
+		        while (scanner.hasNext()) {
+		        	temp = scanner.next();
+		            if (scanner.hasNext()&&!temp.substring(0,1).equals("F")){
+		            	valueOfFund = Double.parseDouble(temp);
+		            	listOfData.add(valueOfFund);
+		                System.out.println(valueOfFund);
+		                }
+		            else 
+		            	fund = temp;
+		            	System.out.println(fund);
+		            	newFund = new Fund(fund, listOfData);
+		            	listOfFunds.add(newFund);
+		            	listOfData = new ArrayList<Double>();
+		            
+		    }
+		        CalculateVariance.Execute(listOfFunds, numberOfDataPoints);
+		        CalculateVariance.getOptimalResult();
+
 		    	System.out.println();
 		    
-		}*/
+		}
 		//finds workbook instance of excel file
 		//XSSFWorkbook workbook = new XSSFWorkbook (fs);
 	

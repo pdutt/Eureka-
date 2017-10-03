@@ -43,8 +43,8 @@ public class Main {
 		///Tester.testGetCovariance();
 		//Tester.testVariance();
 		//Tester.testGenerateRandomWeights();
-		//input.read();
-		Tester.testExecution(100);//number used is number of data points needed to test graph
+		//input.read(1000); // integer parameter = number of data points on graph 
+		Tester.testExecution(1000);//number used is number of data points needed to test graph
 		Tester.testChart();
 		
 		//Tester.testStorageOfWeights();
