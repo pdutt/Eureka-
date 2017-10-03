@@ -27,7 +27,10 @@ import java.io.IOException;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		
+		/*
+		 * TODO: Create list of user objects (with user info) and use their input (years until retirement) to determine allocation
+		 * of stocks vs bonds when distributing total investment.
+		 */
 	    
 		//creates new instance of User Input 
 		//(try to make this static?)
@@ -41,7 +44,7 @@ public class Main {
 		//Tester.testVariance();
 		//Tester.testGenerateRandomWeights();
 		//input.read();
-		Tester.testExecution(10000);//number used is number of data points needed to test graph
+		Tester.testExecution(1000);//number used is number of data points needed to test graph
 		Tester.testChart();
 		
 		//Tester.testStorageOfWeights();

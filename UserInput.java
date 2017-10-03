@@ -75,17 +75,32 @@ public class UserInput {
 	 */
 	
 		/*public void read() throws IOException{
-			File file = new File("/Users/pdutt/Documents/workspace/Eureka!/src/dummydata.txt");
+			File file = new File("/Users/pdutt/Documents/workspace/Eureka!/dummydata.txt");
 		    Scanner scanner = new Scanner(file);
-		    while(scanner.hasNextLine()){
+		    String fund = null;
+		    double valueOfFund = 0.0;
+		    ArrayList<Double> listOfData = new ArrayList<Double>();
+		    ArrayList<Fund> listOfFunds = new ArrayList<Fund>();
 		    
-		    	String fund = scanner.next();
+		    String name =null;
 		    	while(scanner.hasNext()){
-			    	
+		    		name = fund;
+		    		fund = scanner.next();
+		    		System.out.print(fund);
+		    		while(fund.length()!=5){
+		    			fund=scanner.next();
+		    			System.out.print(fund);
+		    			valueOfFund = Double.parseDouble(fund);
+		    			listOfData.add(valueOfFund);
+		    		}
+		    		Fund fundObject = new Fund(name, listOfData);
+		    		listOfFunds.add(fundObject);
+		    		listOfData = new ArrayList<Double>();
 			        System.out.print(fund);
+			        
 			    }
 		    	System.out.println();
-		    }
+		    
 		}*/
 		//finds workbook instance of excel file
 		//XSSFWorkbook workbook = new XSSFWorkbook (fs);
