@@ -39,6 +39,7 @@ import java.util.ArrayList;
 	public static ArrayList<ArrayList<Double>> listOfListOfWeights = new ArrayList<ArrayList<Double>>();
 	public static ArrayList<VarianceInfo> listOfVariances = new ArrayList<VarianceInfo>();
 	
+	
 	/*
 	 * Executes entire calculation of variances. Lists all possible variances using the random
 	 * weight generator. THe variance formula calls the co-variance formula, as well as 

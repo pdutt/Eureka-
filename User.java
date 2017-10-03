@@ -29,6 +29,7 @@ public class User {
 	public double yearlyContribution;
 	public double rate;
 	public double years;
+	public VarianceInfo varianceInfo;
 	
 	//constructor
 	public User(String name, int SSN, double age, double retirementAge, double yearlyContribution, double rate){
@@ -45,6 +46,20 @@ public class User {
 	 */
 	public String getName(){
 		return name;
+	}
+	
+	/*
+	 * sets user's name
+	 */
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	/*
+	 * sets user's variance info
+	 */
+	public void setVarianceInfo(VarianceInfo vInfo){
+		varianceInfo = vInfo;
 	}
 	/*
 	 * calculates user's total return
