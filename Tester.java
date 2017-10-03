@@ -234,6 +234,9 @@ public class Tester {
 		*/
 		//test execution
 		CalculateVariance.Execute(funds, numberOfDataPoints);
+		//return optimal result 
+		CalculateVariance.getOptimalResult();
+		
 		//System.out.println(CalculateVariance.listOfVariances.size());
 		System.out.println("___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
 		System.out.println();

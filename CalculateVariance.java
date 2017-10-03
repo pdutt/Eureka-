@@ -287,6 +287,36 @@ import java.util.ArrayList;
 			return total2-1;
 		}
 	}
+	
+	/*
+	 * Displays best result based on lowest variance.
+	 * Call method ONLY after calling the execute method--> this will ensure that 
+	 * variances are already sorted by lowest to highest.
+	 */
+	public static void getOptimalResult(){
+		
+		double weight =0.0;
+		double returnValue = listOfVariances.get(0).getReturn();
+		
+		returnValue = returnValue*10000;
+		returnValue = Math.round(returnValue);
+		returnValue=returnValue/100;
+		
+		
+		System.out.println("Optimal Variance is: "+listOfVariances.get(0).getVariance());
+		System.out.println("Estimated Percentage of Returns: "+ returnValue+"%");
+		System.out.println("Distribution of weights: ");
+		for(int i=0; i< listOfVariances.get(0).getWeights().size(); i++){
+			weight = listOfVariances.get(0).getWeights().get(i)*10000;
+			weight = Math.round(weight);
+			weight = weight/100;
+			System.out.print("Fund "+(i+1)+": " +weight+"%");
+			System.out.println();
+		}
+		System.out.println();
+		
+	}
+	
 	/*
 	 * finds the mean based on number of data points for each fund.
 	 * 
