@@ -23,6 +23,10 @@
 
 import java.io.IOException;
 
+/*
+ * TODO Important Note: Try changing number of data points to be inserted in graph.
+ * Variance significantly decreases as more data points are added. 
+ */
 
 public class Main {
 

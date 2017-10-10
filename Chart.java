@@ -71,7 +71,7 @@ public class Chart {
 	    }
 
 	    chart.addSeries("a", variances, returns);
-	    chart.addSeries("b", sortVariances(bestVariances), bestReturns);
+	    //chart.addSeries("b", sortVariances(bestVariances), bestReturns);
 	    
 	    //chart.addSeries("b", returns, variances);
 	    //chart.addSeries("b", new double[] { 0, 2, 4, 6, 9 }, new double[] { -1, 6, 4, 0, 4 });

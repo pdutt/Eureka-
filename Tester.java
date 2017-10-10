@@ -37,10 +37,10 @@ public class Tester {
 	    XYChart chart1 = exampleChart.getChart1();
 	    new SwingWrapper<XYChart>(chart1).displayChart();
 	    
-	    Chart exampleChart2 = new Chart();
+	    /*Chart exampleChart2 = new Chart();
 	    XYChart chart2 = exampleChart2.getChart2();
 	    new SwingWrapper<XYChart>(chart2).displayChart();
-	
+	*/
 	}
 	/*
 	 * Tests execution of entire calculatian of variance (displays different variances)
@@ -235,7 +235,7 @@ public class Tester {
 		//test execution
 		CalculateVariance.Execute(funds, numberOfDataPoints);
 		//return optimal result 
-		CalculateVariance.getOptimalResult();
+		
 		
 		//System.out.println(CalculateVariance.listOfVariances.size());
 		System.out.println("___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________");
@@ -256,6 +256,7 @@ public class Tester {
 			}
 			System.out.println();
 		}
+		CalculateVariance.getOptimalResult();
 		
 	}
 	/*

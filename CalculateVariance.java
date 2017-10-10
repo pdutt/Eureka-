@@ -297,14 +297,15 @@ import java.util.ArrayList;
 	public static void getOptimalResult(){
 		
 		double weight =0.0;
-		double returnValue = listOfVariances.get(0).getReturn();
+		int optimalVarianceInfo = getOptimalVarianceInfo();
+		double returnValue = listOfVariances.get(optimalVarianceInfo).getReturn();
 		
 		returnValue = returnValue*10000;
 		returnValue = Math.round(returnValue);
 		returnValue=returnValue/100;
 		
 		
-		System.out.println("Optimal Variance is: "+listOfVariances.get(0).getVariance());
+		System.out.println("Optimal Variance: "+listOfVariances.get(optimalVarianceInfo).getVariance());
 		System.out.println("Estimated Percentage of Returns: "+ returnValue+"%");
 		System.out.println("Distribution of weights: ");
 		for(int i=0; i< listOfVariances.get(0).getWeights().size(); i++){
@@ -318,6 +319,19 @@ import java.util.ArrayList;
 		
 	}
 	
+	/*
+	 * returns integer where best variance and returns are located in the
+	 * list based on returns that are above a certain
+	 * percentage.
+	 */
+	public static int getOptimalVarianceInfo(){
+		for(int i=0; i<listOfVariances.size();i++){
+			if(listOfVariances.get(i).getReturn()>0.075){
+				return i;
+			}
+		}
+		return 0;
+	}
 	/*
 	 * finds the mean based on number of data points for each fund.
 	 * 
