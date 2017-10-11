@@ -26,6 +26,10 @@ import java.io.IOException;
 /*
  * TODO Important Note: Try changing number of data points to be inserted in graph.
  * Variance significantly decreases as more data points are added. 
+ * 
+ * TODO A good indicator of percentages chosen are if the data points with
+ * the biggest weight percentage distribution has the least variety
+ * in data (smallest variance).
  */
 
 public class Main {
@@ -39,16 +43,16 @@ public class Main {
 		//creates new instance of User Input 
 		//(try to make this static?)
 		UserInput input = new UserInput();
-
+		
+		Tester.testExecution(250);//number used is number of data points needed to test graph
 		//Tester methods
-		//Tester.testMean();
+		Tester.testMean();
 		//Tester.testFindNumberOfDataPoints();
-		//Tester.testFindStandardDeviation();
-		///Tester.testGetCovariance();
-		//Tester.testVariance();
+		Tester.testFindStandardDeviation();
+		Tester.testGetCovariance();
+		Tester.testVariance();
 		//Tester.testGenerateRandomWeights();
 		//input.read(1000); // integer parameter = number of data points on graph 
-		Tester.testExecution(1000);//number used is number of data points needed to test graph
 		Tester.testChart();
 		
 		//Tester.testStorageOfWeights();

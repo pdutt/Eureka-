@@ -160,7 +160,7 @@ import java.util.ArrayList;
 		double total =0;
 		
 		//finds first summation 
-		for(int i=1; i< weights.size() && i<= funds.size(); i++){
+		for(int i=0; i< weights.size() && i<= funds.size(); i++){
 			double weightSquared = Math.pow(weights.get(i),2);
 			double stnDevSquared = Math.pow(findStandardDeviation(funds.get(i), funds.get(i).getPercentageOfGrowth().size()),2);
 			
@@ -176,7 +176,7 @@ import java.util.ArrayList;
 			}
 					}
 		total = sum1 +sum2;
-		total = Math.sqrt(total);
+		//TODO (took out the sq rt part) total = Math.sqrt(total);
 		return total;
 		
 	}
@@ -218,7 +218,7 @@ import java.util.ArrayList;
 		for(int i=0; i<dataRange;i++){
 			summation += Math.pow((fund.getPercentageOfGrowth().get(i)-mean), 2);
 		}
-		summation = summation/(dataRange-1);
+		summation = summation/(dataRange);
 		summation = Math.sqrt(summation);
 		return summation;
 	}
@@ -243,18 +243,19 @@ import java.util.ArrayList;
 		double meanX = findMean(fund1, numberOfDataPoints);
 		double meanY= findMean(fund2, numberOfDataPoints);
 		
-		for(int i=0; i<numberOfDataPoints; i++){
-			for(int j=i+1; j<numberOfDataPoints; j++){
+		
+			for(int i=0; i<numberOfDataPoints; i++){
 				
 				x = fund1.getPercentageOfGrowth().get(i);
-				y = fund2.getPercentageOfGrowth().get(j);
+				y = fund2.getPercentageOfGrowth().get(i);
 				x = x-meanX;
 				y = y-meanY;
-				
 				multiplier=x*y;
 				total+=multiplier;
+		
+				
 			}
-		}
+		
 		//finds mean by dividing summation by number of data points
 		total = total/(numberOfDataPoints-1);
 		//returns mean

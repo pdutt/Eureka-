@@ -42,6 +42,7 @@ public class Tester {
 	    new SwingWrapper<XYChart>(chart2).displayChart();
 	*/
 	}
+	
 	/*
 	 * Tests execution of entire calculatian of variance (displays different variances)
 	 */
@@ -106,7 +107,7 @@ public class Tester {
 		
 		Fund fund3 = new Fund("Fund C", dataPoints3);
 		funds.add(fund3);
-		
+		/*
 		dataPoints4.add(0.06);
 		dataPoints4.add(0.10);
 		dataPoints4.add(0.25);
@@ -123,18 +124,18 @@ public class Tester {
 		Fund fund4 = new Fund("Fund D", dataPoints4);
 		funds.add(fund4);
 		
-		dataPoints5.add(0.10);
+		dataPoints5.add(0.14);
 		dataPoints5.add(0.10);
 		dataPoints5.add(0.25);
-		dataPoints5.add(-.16);
+		dataPoints5.add(-.10);
 		dataPoints5.add(0.05);
 		dataPoints5.add(0.06);
 		dataPoints5.add(0.40);
 		dataPoints5.add(-.35);
-		dataPoints5.add(0.06);
-		dataPoints5.add(0.12);
-		dataPoints5.add(0.34);
-		dataPoints5.add(-0.04);
+		dataPoints5.add(0.13);
+		dataPoints5.add(0.05);
+		dataPoints5.add(0.35);
+		dataPoints5.add(-0.12);
 		
 		Fund fund5 = new Fund("Fund E", dataPoints5);
 		funds.add(fund5);
@@ -156,17 +157,15 @@ public class Tester {
 		funds.add(fund6);
 		
 		dataPoints7.add(0.18);
-		dataPoints7.add(0.08);
-		dataPoints7.add(0.09);
+		dataPoints7.add(0.22);
+		dataPoints7.add(0.065);
+		dataPoints7.add(-0.35);
+		dataPoints7.add(.25);
 		dataPoints7.add(-.10);
+		dataPoints7.add(.09);
+		dataPoints7.add(.15);
+		dataPoints7.add(-.05);
 		dataPoints7.add(0.30);
-		dataPoints7.add(-.20);
-		dataPoints7.add(0.51);
-		dataPoints7.add(-.35);
-		dataPoints7.add(0.06);
-		dataPoints7.add(0.09);
-		dataPoints7.add(0.08);
-		dataPoints7.add(-0.04);
 		
 		Fund fund7 = new Fund("Fund G", dataPoints7);
 		funds.add(fund7);
@@ -217,7 +216,7 @@ public class Tester {
 		dataPoints10.add(-0.04);
 		
 		Fund fund10 = new Fund("Fund J", dataPoints10);
-		funds.add(fund10);
+		funds.add(fund10);*/
 		
 		
 		//populates list of funds with dummy data
@@ -256,8 +255,8 @@ public class Tester {
 			}
 			System.out.println();
 		}
+		System.out.println();
 		CalculateVariance.getOptimalResult();
-		
 	}
 	/*
 	 * generates random weights
@@ -280,7 +279,7 @@ public class Tester {
 		CalculateVariance.listAllPossibleWeightsUsingPermutations(3, 100, weights, listOfWeights);
 		
 		}
-	
+
 	
 	/*
 	 * Tests covariance based on randomly generated dummy data.
@@ -290,20 +289,55 @@ public class Tester {
 		//creates dummy lists of data points
 		ArrayList<Double> dataPoints1 = new ArrayList<Double>();
 		ArrayList<Double> dataPoints2 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints3 = new ArrayList<Double>();
 				
 		//populates both lists with random numbers (random range of values as well)
-		for (int i=0; i<1000; i++){
-			dataPoints1.add(Math.floor(Math.random()*11));
-		}
-		for (int i=0; i<1000; i++){
-			dataPoints2.add(Math.floor(Math.random()*11));
-		}
-				
-		//creates two dummy funds
-		Fund fund1 = new Fund("Fund A", dataPoints1);
-		Fund fund2 = new Fund("Fund B", dataPoints2);
+		dataPoints1.add(0.1);
+		dataPoints1.add(0.12);
+		dataPoints1.add(0.04);
+		dataPoints1.add(-0.12);
+		dataPoints1.add(0.08);
+		dataPoints1.add(0.09);
+		dataPoints1.add(0.25);
+		dataPoints1.add(0.10);
+		dataPoints1.add(-0.04);
+		dataPoints1.add(0.10);
 		
-		System.out.println("TEST CASE-->[Calculates Co-variance]: "+ CalculateVariance.getCovariance(fund1, fund2));
+		Fund fund1 = new Fund("Fund A", dataPoints1);
+		funds.add(fund1);
+		
+		dataPoints2.add(0.20);
+		dataPoints2.add(0.22);
+		dataPoints2.add(0.065);
+		dataPoints2.add(-0.30);
+		dataPoints2.add(.25);
+		dataPoints2.add(-.10);
+		dataPoints2.add(.07);
+		dataPoints2.add(.15);
+		dataPoints2.add(-.05);
+		dataPoints2.add(0.27);
+		
+		Fund fund2 = new Fund("Fund B", dataPoints2);
+		funds.add(fund2);
+		
+		dataPoints3.add(0.14);
+		dataPoints3.add(0.10);
+		dataPoints3.add(0.25);
+		dataPoints3.add(-.10);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.06);
+		dataPoints3.add(0.40);
+		dataPoints3.add(-.35);
+		dataPoints3.add(0.13);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.35);
+		dataPoints3.add(-0.12);
+		
+		Fund fund3 = new Fund("Fund C", dataPoints3);
+		funds.add(fund3);
+		//creates two dummy funds
+		
+		System.out.println("TEST CASE-->[Calculates Co-variance]: "+ CalculateVariance.getCovariance(fund2, fund3));
 	}
 	
 	/*
@@ -315,15 +349,23 @@ public class Tester {
 		ArrayList<Double> dataPoints1 = new ArrayList<Double>();
 		
 		//populates list with random numbers (random range of values as well)
-		for (int i=0; i<1000; i++){
-			dataPoints1.add(Math.floor(Math.random()*11));
-		}
+		dataPoints1.add(0.1);
+		dataPoints1.add(0.12);
+		dataPoints1.add(0.04);
+		dataPoints1.add(-0.12);
+		dataPoints1.add(0.08);
+		dataPoints1.add(0.09);
+		dataPoints1.add(0.25);
+		dataPoints1.add(0.10);
+		dataPoints1.add(-0.04);
+		dataPoints1.add(0.10);
 		
-		//creates a dummy fund
-		Fund fund = new Fund("Fund A", dataPoints1);
+		Fund fund1 = new Fund("Fund A", dataPoints1);
+		funds.add(fund1);
+
 		
 		//calls findStandardDeviation method
-		System.out.println("TEST CASE--> [Standard Deviation (Individual Fund)]: "+CalculateVariance.findStandardDeviation(fund, fund.getPercentageOfGrowth().size()));
+		System.out.println("TEST CASE--> [Standard Deviation (Individual Fund)]: "+CalculateVariance.findStandardDeviation(fund1, fund1.getPercentageOfGrowth().size()));
 	}
 	
 	/*
@@ -338,16 +380,34 @@ public class Tester {
 		ArrayList<Double> dataPoints2 = new ArrayList<Double>();
 		
 		//populates both lists with random numbers (random range of values as well)
-		for (int i=0; i<Math.floor(Math.random()*100); i++){
-			dataPoints1.add(Math.floor(Math.random()*11));
-		}
-		for (int i=0; i<Math.floor(Math.random()*100); i++){
-			dataPoints2.add(Math.floor(Math.random()*11));
-		}
+		dataPoints1.add(0.1);
+		dataPoints1.add(0.12);
+		dataPoints1.add(0.04);
+		dataPoints1.add(-0.12);
+		dataPoints1.add(0.08);
+		dataPoints1.add(0.09);
+		dataPoints1.add(0.25);
+		dataPoints1.add(0.10);
+		dataPoints1.add(-0.04);
+		dataPoints1.add(0.10);
 		
-		//creates two dummy funds
 		Fund fund1 = new Fund("Fund A", dataPoints1);
+		funds.add(fund1);
+		
+		dataPoints2.add(0.20);
+		dataPoints2.add(0.22);
+		dataPoints2.add(0.065);
+		dataPoints2.add(-0.30);
+		dataPoints2.add(.25);
+		dataPoints2.add(-.10);
+		dataPoints2.add(.07);
+		dataPoints2.add(.15);
+		dataPoints2.add(-.05);
+		dataPoints2.add(0.27);
+		
 		Fund fund2 = new Fund("Fund B", dataPoints2);
+		funds.add(fund2);
+		
 		
 		//calls function and prints value (number of data points to be used)
 		System.out.println("TEST CASE-->[Number of Data Points]: "+CalculateVariance.findNumberOfDataPoints(fund1, fund2));
@@ -365,7 +425,7 @@ public class Tester {
 	 * 
 	 */
 	public static void testMean(){
-		ArrayList<Double> dataPoints1 = new ArrayList<Double>();
+		ArrayList<Double> dataPoints3 = new ArrayList<Double>();
 
 		//adds random data points from 0-10
 		//for (int i=0; i<Math.floor(Math.random()*100); i++){
@@ -373,22 +433,24 @@ public class Tester {
 		//}
 		//manual entry if necessary 
 		
-		dataPoints1.add(2.3);
-		dataPoints1.add(1.3);
-		dataPoints1.add(1.5);
-		dataPoints1.add(1.8);
-		dataPoints1.add(2.0);
-		dataPoints1.add(4.9);
-		dataPoints1.add(0.9);
-		dataPoints1.add(2.4);
-		dataPoints1.add(4.8);
-		dataPoints1.add(5.6);
-		dataPoints1.add(9.0);
-		dataPoints1.add(1.3);
+		dataPoints3.add(0.14);
+		dataPoints3.add(0.10);
+		dataPoints3.add(0.25);
+		dataPoints3.add(-.10);
+		dataPoints3.add(0.05);
+		dataPoints3.add(0.06);
+		dataPoints3.add(0.40);
+		dataPoints3.add(-.35);
+		dataPoints3.add(0.13);
+		dataPoints3.add(0.05);
+		//dataPoints3.add(0.35);
+		//dataPoints3.add(-0.12);
 		
-		
-		Fund fund = new Fund("Fund A", dataPoints1);
-		System.out.println("TEST CASE-->[Mean (Individual Fund)]: "+CalculateVariance.findMean(fund, dataPoints1.size()-1));
+		Fund fund3 = new Fund("Fund C", dataPoints3);
+		funds.add(fund3);
+	
+
+		System.out.println("TEST CASE-->[Mean (Individual Fund)]: "+CalculateVariance.findMean(fund3, dataPoints3.size()));
 	}
 	@SuppressWarnings("null")
 	public static void testVariance(){
@@ -416,27 +478,32 @@ public class Tester {
 		dataPoints1.add(0.1);
 		dataPoints1.add(0.12);
 		dataPoints1.add(0.04);
-		dataPoints1.add(-0.22);
-		dataPoints1.add(0.16);
-		dataPoints1.add(0.03);
-		dataPoints1.add(0.04);
+		dataPoints1.add(-0.12);
+		dataPoints1.add(0.08);
+		dataPoints1.add(0.09);
+		dataPoints1.add(0.25);
 		dataPoints1.add(0.10);
 		dataPoints1.add(-0.04);
 		dataPoints1.add(0.10);
 		
-		dataPoints2.add(0.02);
+		Fund fund1 = new Fund("Fund A", dataPoints1);
+		funds.add(fund1);
+		
+		dataPoints2.add(0.20);
 		dataPoints2.add(0.22);
 		dataPoints2.add(0.065);
 		dataPoints2.add(-0.30);
 		dataPoints2.add(.25);
 		dataPoints2.add(-.10);
 		dataPoints2.add(.07);
-		dataPoints2.add(.1);
+		dataPoints2.add(.15);
 		dataPoints2.add(-.05);
-		dataPoints2.add(0.2);
+		dataPoints2.add(0.27);
 		
+		Fund fund2 = new Fund("Fund B", dataPoints2);
+		funds.add(fund2);
 		
-		dataPoints3.add(0.06);
+		dataPoints3.add(0.14);
 		dataPoints3.add(0.10);
 		dataPoints3.add(0.25);
 		dataPoints3.add(-.10);
@@ -449,18 +516,16 @@ public class Tester {
 		dataPoints3.add(0.35);
 		dataPoints3.add(-0.12);
 		
-		
-		Fund fund1 = new Fund("Fund A", dataPoints1);
-		Fund fund2 = new Fund("Fund B", dataPoints2);
 		Fund fund3 = new Fund("Fund C", dataPoints3);
+		funds.add(fund3);
 		
 		funds.add(fund1);
 		funds.add(fund2);
 		funds.add(fund3);
 		
-		weights.add(56.0);
-		weights.add(12.0);
-		weights.add(32.0);
+		weights.add(0.7789);
+		weights.add(0.1743);
+		weights.add(0.0469);
 		
 		System.out.println("TEST CASE-->[Calculates Variance]: "+CalculateVariance.findVariance(funds, weights));
 		
