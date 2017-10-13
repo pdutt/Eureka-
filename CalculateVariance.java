@@ -15,7 +15,9 @@
 
 import java.util.ArrayList;
 
-/*
+/*TODO: FIND RETURN RANGE BASED ON VARIANCE, RETURN PERCENTAGE, ETC. AND THEN CALCULATE
+ *  (Multiply by amount of money invested) BEST VARIANCE AND RETURN!!!!!
+ * 
  * NOTE: Right now--> individual fund means and standard deviations are calculated 
  * based on the number of data points used for that particular fund. Ex. each fund that
  * is compared will also be compared based on number of data points. THe fund with 
@@ -34,6 +36,11 @@ import java.util.ArrayList;
  * ALSO-- I have NOT filtered by year. So if Fund A starts in 2010 , and Fund B
  * starts in 2003... the calculations will start at the start date of each fund. Can 
  * modify based on date later. 
+ * 
+ * source:
+ * http://www.ewp.rpi.edu/hartford/~youneh/INVII/Week%204/mv_analysis_2up.pdf
+ * 
+ * 
  */public class CalculateVariance {
 	
 	public static ArrayList<ArrayList<Double>> listOfListOfWeights = new ArrayList<ArrayList<Double>>();
