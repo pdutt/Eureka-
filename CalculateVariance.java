@@ -323,7 +323,7 @@ import java.util.ArrayList;
 			System.out.print("Fund "+(i+1)+": " +weight+"%");
 			System.out.println();
 		}
-		System.out.println("");
+		System.out.println(" ");
 		
 	}
 	
